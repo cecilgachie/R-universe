@@ -1,0 +1,272 @@
+.dashboard-layout {
+  min-height: 100vh;
+}
+
+.dashboard-sider {
+  background: #1f1f1f;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
+}
+
+.dashboard-logo {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.dashboard-logo-img {
+  transition: transform 0.3s ease;
+}
+
+.dashboard-logo-img:hover {
+  transform: scale(1.1);
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 1;
+}
+
+.dashboard-content {
+  padding: 24px;
+  background: #f0f2f5;
+}
+
+.dashboard-card {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.summary-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f1f1f;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #a71c24;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8b2c2d;
+}
+
+/* Animation for cards */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dashboard-card {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .dashboard-content {
+    padding: 16px;
+  }
+  
+  .dashboard-card {
+    margin-bottom: 16px;
+  }
+}
+
+/* Custom tooltip styling */
+.ant-tooltip {
+  max-width: 300px;
+}
+
+.ant-tooltip-inner {
+  background-color: rgba(0, 0, 0, 0.85);
+  border-radius: 4px;
+  padding: 8px 12px;
+}
+
+/* Progress bar customization */
+.ant-progress-bg {
+  background: linear-gradient(90deg, #ffd700 0%, #ffa500 100%);
+}
+
+/* Chart tooltips */
+.recharts-tooltip-wrapper {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  padding: 8px;
+}
+
+/* Button hover effects */
+.ant-btn {
+  transition: all 0.3s ease;
+}
+
+.ant-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Card hover effects */
+.dashboard-card:hover .section-title {
+  color: #a71c24;
+  border-bottom-color: #a71c24;
+}
+
+/* Meter card specific styles */
+.meter-card {
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.meter-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.meter-card .ant-progress-circle {
+  transition: all 0.3s ease;
+}
+
+.meter-card:hover .ant-progress-circle {
+  transform: scale(1.05);
+}
+
+.meter-card .section-title {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f1f1f;
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #f0f0f0;
+  transition: all 0.3s ease;
+}
+
+.meter-card:hover .section-title {
+  color: #a71c24;
+  border-bottom-color: #a71c24;
+}
+
+/* Custom progress circle colors */
+.ant-progress-circle .ant-progress-circle-path {
+  stroke-linecap: round;
+}
+
+.ant-progress-circle .ant-progress-text {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Responsive adjustments for meters */
+@media (max-width: 768px) {
+  .meter-card .ant-progress-circle {
+    width: 140px !important;
+    height: 140px !important;
+  }
+  
+  .meter-card .section-title {
+    font-size: 16px;
+  }
+}
+
+.gauge-labels-arc-container {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  margin: 0 auto;
+}
+
+.gauge-label-arc {
+  position: absolute;
+  font-weight: 600;
+  font-size: 15px;
+  pointer-events: none;
+  white-space: nowrap;
+  text-shadow: 1px 1px 2px #fff, 0 0 2px #fff;
+}
+
+.gauge-label-arc.incidental {
+  color: #0074D9;
+  left: 8%;
+  top: 60%;
+  transform: rotate(-25deg);
+}
+.gauge-label-arc.moderate-low {
+  color: #2ECC40;
+  left: 25%;
+  top: 32%;
+  transform: rotate(-10deg);
+}
+.gauge-label-arc.moderate-high {
+  color: #FFC300;
+  left: 44%;
+  top: 18%;
+  transform: rotate(0deg);
+}
+.gauge-label-arc.significant-high {
+  color: #FF4136;
+  left: 65%;
+  top: 32%;
+  transform: rotate(10deg);
+}
+.gauge-label-arc.extreme {
+  color: #800000;
+  left: 80%;
+  top: 60%;
+  transform: rotate(25deg);
+}
+
+/* Bar hover effect for Distribution by Risk Category */
+.recharts-bar-rectangle:hover path {
+  fill: #a94442 !important;
+  filter: drop-shadow(0 2px 6px rgba(128,0,0,0.15));
+  transition: fill 0.2s, filter 0.2s;
+}
+
+.recharts-label-list text:hover {
+  font-weight: 900 !important;
+  font-size: 18px !important;
+  fill: #a94442 !important;
+  transition: font-size 0.2s, fill 0.2s;
+}

@@ -1,0 +1,115 @@
+.register-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+    padding: 20px;
+}
+
+.register-form {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.register-form img {
+    width: 100px;
+    margin-bottom: 1rem;
+}
+
+.register-form h2 {
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+}
+
+.form-row label {
+    flex: 1;
+}
+
+.register-form label {
+    width: 100%;
+    display: block;
+}
+
+.register-form input,
+.register-form select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: #f8f9fa;
+}
+
+.register-form input:focus,
+.register-form select:focus {
+    outline: none;
+    border-color: #a71c24;
+    box-shadow: 0 0 0 2px rgba(167, 28, 36, 0.1);
+    background: white;
+}
+
+.register-form button {
+    width: 100%;
+    padding: 14px;
+    background-color: #a71c24;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.register-form button:hover {
+    background-color: #8b161d;
+    transform: translateY(-1px);
+}
+
+.login-link {
+    margin-top: 1rem;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.login-link a {
+    color: #a71c24;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.login-link a:hover {
+    color: #8b161d;
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .register-form {
+        padding: 1.5rem;
+    }
+    
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}
